@@ -1,0 +1,199 @@
+/*===================================================================
+ 
+	Plugin Name: 	Bean Pricing Tables
+	Plugin URI:     http://themebeans.com/plugin/bean-pricing-tables
+	Author:         ThemeBeans
+	Author URI:     http://themebeans.com
+	Version:        1.1
+ 
+/*===================================================================*/
+
+
+
+
+
+/*===================================================================*/
+/* RESPONSIVE LAYOUT - JUST IN CASE
+/*===================================================================*/
+.bean-pricing-table .four			{ width: 33.33333%; }
+.bean-pricing-table .five			{ width: 41.66667%; }
+.bean-pricing-table .six 			{ width: 50%; 		}
+.bean-pricing-table .column.centered, 
+.bean-pricing-table .columns.centered { float: none; margin: 0 auto; }
+@media only screen and (max-width: 767px) { 
+	.bean-pricing-table .column:before, 
+	.bean-pricing-table .columns:before, 
+	.bean-pricing-table .column:after, 
+	.bean-pricing-table .columns:after { content: ""; display: table; }
+	.bean-pricing-table .column:after, 
+	.bean-pricing-table .columns:after { clear: both; }
+	.bean-pricing-table .mobile-two { width: 50% !important; float: left; padding: 0 10px; }
+	.bean-pricing-table .mobile-four { width: 100% !important; float: left; padding: 0 10px; }
+	.bean-pricing-table .pricing-highlighted { margin-top: 0px!important; }
+}
+@media only screen and (max-width: 600px) { 
+	.bean-pricing-table .columns { padding: 0px!important; }
+	.pricing-column.four.columns.mobile-two {
+		padding: 0px;
+		width: 100%!important;
+	}
+}
+
+
+
+
+/*===================================================================*/
+/* TABLE LAYOUT
+/*===================================================================*/
+.bean-pricing-table, 
+.bean-pricing-table p,
+.bean-pricing-table h5, 
+.bean-pricing-table h6 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bean-pricing-table {
+	padding: 0;
+	-webkit-font-smoothing: auto;
+} 
+.bean-pricing-table p:empty { 
+	display: none; 
+}
+.bean-pricing-table .columns {
+	padding: 20px;
+}
+.bean-pricing-table .four.columns {
+	padding: 10px;
+}
+.pricing-column.five.columns.centered {
+	min-width: 300px;
+}
+
+
+
+
+/*===================================================================*/
+/* TABLE MAST
+/*===================================================================*/
+.bean-pricing-table .table-mast {
+	background-color: #222;
+	padding: 35px 30px 32px;
+}
+.bean-pricing-table .table-mast h5.title {
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+	text-transform: none;
+}
+.bean-pricing-table .table-mast h6.price {
+	color: #A2A2A2;
+	font-size: 15px;
+	font-weight: normal;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	text-transform: none;
+}
+.bean-pricing-table .table-mast p {
+	color: #777;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 20px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+/* HOVER STYLES */
+.bean-pricing-table .table-mast,
+.bean-pricing-table .table-mast h6.price,
+.bean-pricing-table .table-mast p {
+	-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out; 	   
+		 -o-transition: all .2s ease-in-out;
+} 	 	 
+.bean-pricing-table .table-mast:hover {
+	background-color: #333;
+}
+.bean-pricing-table .table-mast:hover h6.price {
+	color: #FFF;
+}
+.bean-pricing-table .table-mast:hover p {
+	color: #A2A2A2;
+}
+.bean-pricing-table .pricing-column li span {
+	color: #2AC176;
+}
+.bean-pricing-table .pricing-highlighted {
+	background-color: #2AC176;
+	color: #FFF;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 30px;
+	height: 28px;
+	margin: -30px 0 2px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+
+
+/*===================================================================*/
+/* LIST STYLES
+/*===================================================================*/
+.bean-pricing-table .pricing-column { 
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.bean-pricing-table .pricing-column ul {
+	background: #F8F8F8; 
+	margin: 0px 0px 0px 0px;
+	padding: 25px 0;
+}
+.bean-pricing-table .pricing-column li {
+	color: #a2a2a2;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 18px;
+	list-style: none;
+	padding: 0 30px;
+	margin-bottom: 10px;
+}
+.bean-pricing-table .pricing-column li.info {
+	cursor: help;
+}
+.bean-pricing-table .pricing-column li.info:hover {
+	color: #222;
+}
+
+
+
+
+/*===================================================================*/
+/* TOOLTIPS
+/*===================================================================*/
+#powerTip {
+	background-color: #2AC176;
+	border-radius: 0 4px 4px 4px;
+	box-sizing: border-box;
+	color: #FFF;
+	display: none;
+	font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	max-width: 260px;
+	padding: 20px;
+	position: absolute;
+	z-index: 9999;
+	-webkit-font-smoothing: auto;
+}
+#powerTip:after {
+	border-style: solid;
+	border-color: #2AC176 transparent;
+	border-width: 15px 0 0 20px;
+	content: "";
+	left: -20px;
+	position: absolute;
+	top: 0px;
+}
